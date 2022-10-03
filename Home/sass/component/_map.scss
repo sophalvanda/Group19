@@ -1,0 +1,8 @@
+.map{
+    flex-direction: column;
+    @include box;
+    margin-top: 40px;
+    button{
+        padding: $padding;
+    }
+}

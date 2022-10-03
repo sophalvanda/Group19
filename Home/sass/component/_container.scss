@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    margin-top: $mt;
+    justify-content: space-evenly;
+    background-color: rgb(39, 112, 221);
+    height: 50vh;
+    button{
+        padding: $padding;
+    }
+}

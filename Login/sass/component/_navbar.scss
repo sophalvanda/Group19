@@ -1,0 +1,67 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: rgb(61, 146, 231);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    margin-top: -0.5%;
+    .nav-left{
+        display: flex;
+        button{
+            @include bnt;
+            padding: 10px;
+        }
+        button:hover{
+            background-color: $bnt;
+            cursor: pointer;
+        }
+    }
+    img{
+        width: 80px;
+        height: 60px;
+    }
+    .nav-right{
+        margin-top: $mt;
+        margin-right: $ml;
+        button{
+            padding: 10px;
+            @include bnt;
+            margin-top: -1px;
+        }
+        #active {
+            background: orange;
+        }
+        button:hover{
+            background-color: $bnt;
+            cursor: pointer;
+        }
+        i{
+            display: none;
+        }
+    }
+    .nav-left{
+        margin-left: $ml;
+        button{
+            margin-left: 20px;
+        }
+
+    }
+}
+.navbar{
+    @include responsiveSize(small){
+        margin-top: -2.5%;
+        button{
+            display: none;
+        }
+        img{
+            margin-left: -25px;
+        }
+        .nav-right{
+            i{
+                display: block;
+                font-size: 50px;
+            }
+        }
+    }
+}

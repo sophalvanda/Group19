@@ -1,0 +1,60 @@
+
+.header{
+    display: flex;
+    margin: 6%;
+    height: 65vh;
+}
+.header-left h1{
+    font-size: 50px;
+}
+.header-right img{
+    width:400px;
+   margin-left: 25%;
+}
+.detail{
+    display: flex;
+    margin-left: 2%;
+}
+.detail img {
+    width: 7%;
+    padding: 10px;
+}
+.apply button{
+    padding: 8px;
+    border: none;
+    background-color: rgb(52, 52, 154);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.header{
+    @include responsiveSize(medium){
+        height: 45vh;
+        .header-right{
+            img{
+                width: 300px;
+                margin-left: 6%;
+                margin-top: 15%;
+            }
+        }
+    }
+    @include responsiveSize(small){
+        height: 30vh;
+        margin-top: 15%;
+        display: flex;
+        .detail{
+            display: none;
+        }
+        h1{
+            font-size: 20px;
+        }
+        .header-right{
+
+            img{
+                width: 70%;
+                margin-left: 25%;
+                margin-top: 5%;
+            }
+        }
+    }
+}

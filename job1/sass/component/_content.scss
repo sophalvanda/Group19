@@ -1,0 +1,43 @@
+
+.content{
+    display: flex;
+    justify-content:space-around;
+    
+}
+.content-right{
+    background-color: rgb(61, 146, 231);
+    padding: 60px;
+    border-radius: 20px;
+}
+.type{
+    display: flex;
+    
+}
+.detail-right{
+    margin-left: 70px;
+}
+.content{
+    @include responsiveSize(medium){
+        justify-content: space-between;
+        .content-left{
+            font-size: 15px;
+            margin-left: 5%;
+        }
+        .content-right{
+            margin-right: 5%;
+            margin-left: 10px;
+        }
+    }
+    @include responsiveSize(small){
+        display: flex;
+        flex-direction: column;
+        .content-right{
+            font-size: 13px;
+            margin-left: 20px;
+        }
+        .content-left{
+            margin-right: 5%;
+        }
+    }
+}
+

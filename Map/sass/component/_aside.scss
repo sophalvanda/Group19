@@ -1,0 +1,44 @@
+.aside{
+    // @include container;
+    // button{
+    display: flex;
+    justify-content: space-evenly;
+    img{
+        width: 500px;
+    }
+    button{
+        background-color: rgb(61, 146, 231);
+        padding: $padding;
+        border:none;
+        border-radius: 10px;
+        color: white;
+    }
+    // //     @include button
+    // // }
+}
+.aside{
+    @include responsiveSize(medium){
+        img{
+            width: 70%;
+            margin-left: 10%;
+        }
+        h1{
+            font-size: 24px;
+        }
+        .aside-right{
+            margin-right: 10%;
+        }
+    }
+    @include responsiveSize(small){
+        display: flex;
+        flex-direction: column-reverse;
+        p,
+        button{
+            display: none;
+        }
+        h1{
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}

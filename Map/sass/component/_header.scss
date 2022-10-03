@@ -1,0 +1,64 @@
+@import"../Globla/mixin";
+.header{
+    height: 76vh;
+    width: 100%;
+    margin-top: -80;
+    padding-top: 10%;
+    margin-bottom: 10px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    .header-left{
+        margin-left:10%;
+        // margin-top: 20vh;
+        h1{
+            text-align: center;
+            
+        }
+        button{
+            padding: $padding;
+            // @include button
+            background-color: rgb(61, 146, 231);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+        }
+    }
+    .header-right{
+        margin-right: $ml;
+        margin-top: -30px;
+        img{
+            width:600px;
+        }
+    }
+    
+}
+.header{
+    @include responsiveSize(medium){
+        height: 55vh;
+        .header-left{
+            margin-top: 10%;
+        }
+        .header-right{
+            margin-top: 10%;
+        }
+        p{
+            font-size: 18px;
+        }
+        .header-right{
+            img{
+               width: 400px; 
+            }
+
+        }
+    }
+    @include responsiveSize(small){
+        display: flex;
+        flex-direction: column;
+        p,
+        button{
+            display: none;
+        }
+    }
+}
